@@ -1,0 +1,106 @@
+ .section {
+   background: #ffffff;
+ }
+ 
+ .hero {
+   height: 430px;
+   background:
+     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+     url("/handsake.webp") center/cover no-repeat;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   color: #ffffff;
+ }
+ 
+ .heroInner {
+   width: 92%;
+   max-width: 1100px;
+   margin: 0 auto;
+ }
+ 
+ .title {
+   font-size: 32px;
+   font-weight: 800;
+   margin-bottom: 8px;
+ }
+ 
+ .subtitle {
+   color: #e7e7e7;
+   font-size: 14px;
+ }
+ 
+ .wrap {
+   width: 92%;
+   max-width: 1200px;
+   margin: -60px auto 0 auto;
+   padding-bottom: 40px;
+ }
+ 
+ .grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 18px;
+ }
+ 
+ .card {
+   background: #ffffff;
+   border-radius: 16px;
+   padding: 18px;
+   border: 2px solid #ff4d2f;
+   box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+ }
+ 
+ .quote {
+   color: #444;
+   line-height: 1.8;
+   margin-bottom: 14px;
+   font-size: 15px;
+   height: 150px;
+   width: 100%;
+ }
+ 
+ .author {
+   font-weight: 700;
+   color: #111;
+ }
+ 
+ .dots {
+   display: flex;
+   gap: 6px;
+   justify-content: center;
+   padding: 16px 0 6px 0;
+ }
+ 
+ .dot {
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background: #ddd;
+ }
+ 
+ .dotActive {
+   background: #ff4d2f;
+ }
+ 
+ @media (max-width: 900px) {
+   .grid {
+     grid-template-columns: 1fr;
+   }
+   .wrap {
+     margin-top: -40px;
+   }
+ }
+
+@media (max-width: 640px) {
+  .hero {
+    height: 280px;
+  }
+  .title {
+    font-size: 28px;
+  }
+  .subtitle {
+    font-size: 13px;
+  }
+}
