@@ -247,8 +247,14 @@
 }
 
 /* Rotate arrow on hover */
-.hasDropdown:hover .dropdownarrow {
+.hasDropdown:hover > .dropdownTrigger .dropdownarrow {
   transform: rotate(180deg);
+}
+.hasSubDropdown .dropdownarrow {
+  transform: rotate(360deg);
+}
+.hasSubDropdown:hover > .dropdownTrigger .dropdownarrow {
+  transform: rotate(-90deg);
 }
 .dropdownTrigger {
   color: #111;
