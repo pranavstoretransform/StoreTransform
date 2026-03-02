@@ -30,7 +30,10 @@ const Header = () => {
 
             {/* ABOUT US */}
             <li className={styles.hasDropdown}>
-              <Link href="#">ABOUT US <img src="/downarrow.svg"alt="dropdown"className={styles.dropdownarrow}/></Link>
+              <a href="#" className={styles.dropdownTrigger}>
+                <span className={styles.menuText}>ABOUT US</span>
+                <img src="/downarrow.svg" alt="dropdown" className={styles.dropdownarrow} />
+              </a>
 
               <ul className={styles.dropdown}>
                 <li>
@@ -53,13 +56,19 @@ const Header = () => {
 
             {/* OUR SERVICES */}
             <li className={styles.hasDropdown}>
-              <Link href="#">OUR SERVICES <img src="/downarrow.svg"alt="dropdown"className={styles.dropdownarrow}/></Link>
+              <a href="#" className={styles.dropdownTrigger}>
+                <span className={styles.menuText}>OUR SERVICES</span>
+                <img src="/downarrow.svg" alt="dropdown" className={styles.dropdownarrow} />
+              </a>
 
               <ul className={styles.dropdown}>
 
                 {/* WEB DESIGN SERVICE */}
                 <li className={styles.hasSubDropdown}>
-                  <Link href="#">WEB DESIGN SERVICE <img src="/downarrow.svg"alt="dropdown"className={styles.dropdownarrow}/></Link>
+                  <a href="#" className={styles.dropdownTrigger}>
+                    <span className={styles.menuText}>WEB DESIGN SERVICE</span>
+                    <img src="/downarrow.svg" alt="dropdown" className={styles.dropdownarrow} />
+                  </a>
 
                   <ul className={styles.subDropdown}>
                     <li>
@@ -76,7 +85,10 @@ const Header = () => {
 
                 {/* WEB DEVELOPMENT */}
                 <li className={styles.hasSubDropdown}>
-                  <Link href="#">WEB DEVELOPMENT <img src="/downarrow.svg"alt="dropdown"className={styles.dropdownarrow}/></Link>
+                  <a href="#" className={styles.dropdownTrigger}>
+                    <span className={styles.menuText}>WEB DEVELOPMENT</span>
+                    <img src="/downarrow.svg" alt="dropdown" className={styles.dropdownarrow} />
+                  </a>
 
                   <ul className={styles.subDropdown}>
                     <li>
@@ -93,7 +105,10 @@ const Header = () => {
 
                 {/* DIGITAL MARKETING */}
                 <li className={styles.hasSubDropdown}>
-                  <Link href="#">DIGITAL MARKETING <img src="/downarrow.svg"alt="dropdown"className={styles.dropdownarrow}/></Link>
+                  <a href="#" className={styles.dropdownTrigger}>
+                    <span className={styles.menuText}>DIGITAL MARKETING</span>
+                    <img src="/downarrow.svg" alt="dropdown" className={styles.dropdownarrow} />
+                  </a>
 
                   <ul className={styles.subDropdown}>
                     <li>
@@ -113,7 +128,10 @@ const Header = () => {
 
             {/* HIRE DEVELOPERS */}
             <li className={styles.hasDropdown}>
-              <Link href="#">HIRE DEVELOPERS <img src="/downarrow.svg"alt="dropdown"className={styles.dropdownarrow}/></Link>
+              <a href="#" className={styles.dropdownTrigger}>
+                <span className={styles.menuText}>HIRE DEVELOPERS</span>
+                <img src="/downarrow.svg" alt="dropdown" className={styles.dropdownarrow} />
+              </a>
 
               <ul className={styles.dropdown}>
                 <li>
