@@ -2,17 +2,17 @@
 
 .header {
   width: 100%;
-  background-color: #f3f3f3;
-  padding: 15px 0;
+  background-color: #ffffff; /* Matches first image (pure white) */
+  padding: 10px 0;           /* Reduced padding for a tighter look */
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid #e7e7e7;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1300px; /* Centered content constraint */
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -23,36 +23,38 @@
 /* ================= LOGO ================= */
 
 .logo img {
-  height: 45px;
+  height: 65px; /* Increased size to match the first image scale */
+  width: auto;
   object-fit: contain;
+  display: block;
 }
 
 /* ================= DESKTOP NAV ================= */
 
 .nav {
   display: block;
-  font-weight: 700;
-  font-size: 16px;
 }
 
 .menu {
   display: flex;
   list-style: none;
-  gap: 30px;
+  gap: 35px; /* Spacing between menu items */
   align-items: center;
 }
 
 .menu > li {
-  position: relative
+  position: relative;
 }
 
 .menu > li > a {
   text-decoration: none;
-  color: #000;
-  font-weight: 500;
+  color: #000000;
   font-size: 15px;
+  font-weight: 700; /* Bold as per first image */
   transition: 0.3s ease;
-  font-weight: 700 !important;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .menu > li > a:hover {
@@ -60,12 +62,25 @@
 }
 
 .active a {
-  color: #ff4d2f;
-  border-bottom: 2px solid #ff4d2f;
-  padding-bottom: 4px;
+  color: #ff4d2f !important;
+  border-bottom: 3px solid #ff4d2f; /* Thicker active line */
+  padding-bottom: 5px;
 }
 
-/* ================= FIRST LEVEL DROPDOWN ================= */
+/* ================= DROPDOWNS ================= */
+
+.dropdownTrigger {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.dropdownarrow {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
 
 .hasDropdown:hover .dropdown {
   opacity: 1;
@@ -79,37 +94,32 @@
   left: 0;
   min-width: 240px;
   background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-  padding: 8px 0;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
   list-style: none;
-
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
-  transition: all 0.25s ease;
+  transition: all 0.3s ease;
   z-index: 999;
-}
-
-.dropdown li {
-  position: relative;
 }
 
 .dropdown li a {
   display: block;
-  padding: 11px 18px;
+  padding: 12px 20px;
   font-size: 14px;
-  color: #111;
+  color: #333;
   text-decoration: none;
-  transition: 0.2s;
+  font-weight: 600;
 }
 
 .dropdown li a:hover {
-  background: #f6f6f6;
+  background: #f9f9f9;
   color: #ff4d2f;
 }
 
-/* ================= SECOND LEVEL (FLYOUT) ================= */
+/* ================= SUB-DROPDOWN ================= */
 
 .hasSubDropdown:hover .subDropdown {
   opacity: 1;
@@ -123,143 +133,90 @@
   left: 100%;
   min-width: 240px;
   background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-  padding: 8px 0;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
   list-style: none;
-
   opacity: 0;
   visibility: hidden;
   transform: translateX(10px);
-  transition: all 0.25s ease;
+  transition: all 0.3s ease;
 }
 
-/* ================= MOBILE MENU BUTTON ================= */
+/* ================= MOBILE STYLES ================= */
 
 .menuButton {
   display: none;
-  background: transparent;
+  background: none;
   border: none;
-  font-size: 26px;
+  font-size: 28px;
   cursor: pointer;
-  color: #111;
 }
-
-/* ================= MOBILE NAV ================= */
 
 .mobileNav {
   display: none;
 }
 
-.mobileNav.open {
-  display: block;
+/* Wide Screen Breakpoint */
+@media (max-width: 1350px) {
+  .container { width: 95%; }
 }
 
-.mobileNav ul {
-  list-style: none;
+/* Laptop / Desktop Breakpoint */
+@media (max-width: 1100px) {
+  .menu { gap: 20px; }
+  .menu > li > a { font-size: 14px; }
 }
 
-.mobileNav li a {
-  display: block;
-  padding: 12px 16px;
-  font-size: 15px;
-  color: #111;
-  text-decoration: none;
-}
-
-.mobileNav li a:hover {
-  background: #f7f7f7;
-  color: #ff4d2f;
-}
-
-/* ================= RESPONSIVE ================= */
-
-/* 1200px */
-@media (max-width: 1200px) {
-  .menu {
-    gap: 20px;
-  }
-}
-
-/* 992px */
+/* Tablet / Mobile Breakpoint */
 @media (max-width: 992px) {
-  .nav {
-    display: none;
-  }
-
-  .menuButton {
-    display: block;
-  }
-
-  .logo img {
-    height: 40px;
-  }
+  .nav { display: none; }
+  .menuButton { display: block; }
+  .logo img { height: 55px; }
 
   .mobileNav {
+    display: none;
     position: absolute;
     top: 100%;
     right: 0;
-    width: 260px;
-    background: #ffffff;
-    border: 1px solid #ececec;
-    border-radius: 12px;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
-    overflow: hidden;
-    padding: 6px 0;
+    width: 250px;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 10px 0;
+  }
+  
+  .mobileNav.open {
+    display: block;
+  }
+
+  .mobileNav li a {
+    padding: 12px 20px;
+    display: block;
+    color: #333;
+    font-weight: 600;
+    text-decoration: none;
   }
 }
 
-/* 768px */
-@media (max-width: 768px) {
-  .mobileNav {
-    width: 220px;
-  }
-
-  .logo img {
-    height: 36px;
-  }
-}
-
-/* 480px */
+/* Small Mobile Breakpoint */
 @media (max-width: 480px) {
-  .container {
-    width: 94%;
-  }
-
-  .mobileNav {
-    width: 200px;
-  }
-
-  .logo img {
-    height: 50px;
-  }
-}
-.dropdownTrigger {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  .logo img { height: 45px; }
+  .container { width: 92%; }
 }
 
-.dropdownarrow {
-  width: 20px;
-  height: 20px;
-  transition: transform 0.3s ease;
-}
+/* ================= FIRST LEVEL ARROW ROTATION ================= */
 
-/* Rotate arrow on hover */
 .hasDropdown:hover > .dropdownTrigger .dropdownarrow {
   transform: rotate(180deg);
 }
-.hasSubDropdown .dropdownarrow {
+
+/* Default state for nested arrow (pointing right) */
+.hasSubDropdown > .dropdownTrigger .dropdownarrow {
   transform: rotate(360deg);
 }
+
+/* Rotate only when that sub dropdown is hovered */
 .hasSubDropdown:hover > .dropdownTrigger .dropdownarrow {
   transform: rotate(-90deg);
-}
-.dropdownTrigger {
-  color: #111;
-}
-
-.menu > li > a:hover {
-  color: #ff4d2f;
 }

@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 import styles from "./Header.module.css";
 
-
 const Header = () => {
   const [open, setOpen] = useState(false);
 
@@ -62,67 +61,39 @@ const Header = () => {
               </a>
 
               <ul className={styles.dropdown}>
-
-                {/* WEB DESIGN SERVICE */}
                 <li className={styles.hasSubDropdown}>
                   <a href="#" className={styles.dropdownTrigger}>
                     <span className={styles.menuText}>WEB DESIGN SERVICE</span>
                     <img src="/downarrow.svg" alt="dropdown" className={styles.dropdownarrow} />
                   </a>
-
                   <ul className={styles.subDropdown}>
-                    <li>
-                      <Link href="#">UI/UX DESIGN</Link>
-                    </li>
-                    <li>
-                      <Link href="#">CUSTOM WEB DESIGN</Link>
-                    </li>
-                    <li>
-                      <Link href="#">LANDING PAGE DESIGN</Link>
-                    </li>
+                    <li><Link href="#">UI/UX DESIGN</Link></li>
+                    <li><Link href="#">CUSTOM WEB DESIGN</Link></li>
+                    <li><Link href="#">LANDING PAGE DESIGN</Link></li>
                   </ul>
                 </li>
-
-                {/* WEB DEVELOPMENT */}
                 <li className={styles.hasSubDropdown}>
                   <a href="#" className={styles.dropdownTrigger}>
                     <span className={styles.menuText}>WEB DEVELOPMENT</span>
                     <img src="/downarrow.svg" alt="dropdown" className={styles.dropdownarrow} />
                   </a>
-
                   <ul className={styles.subDropdown}>
-                    <li>
-                      <Link href="#">SHOPIFY DEVELOPMENT</Link>
-                    </li>
-                    <li>
-                      <Link href="#">MAGENTO DEVELOPMENT</Link>
-                    </li>
-                    <li>
-                      <Link href="#">WORDPRESS DEVELOPMENT</Link>
-                    </li>
+                    <li><Link href="#">SHOPIFY DEVELOPMENT</Link></li>
+                    <li><Link href="#">MAGENTO DEVELOPMENT</Link></li>
+                    <li><Link href="#">WORDPRESS DEVELOPMENT</Link></li>
                   </ul>
                 </li>
-
-                {/* DIGITAL MARKETING */}
                 <li className={styles.hasSubDropdown}>
                   <a href="#" className={styles.dropdownTrigger}>
                     <span className={styles.menuText}>DIGITAL MARKETING</span>
                     <img src="/downarrow.svg" alt="dropdown" className={styles.dropdownarrow} />
                   </a>
-
                   <ul className={styles.subDropdown}>
-                    <li>
-                      <Link href="#">PPC MANAGEMENT SERVICE</Link>
-                    </li>
-                    <li>
-                      <Link href="#">SOCIAL MEDIA OPTIMIZATION</Link>
-                    </li>
-                    <li>
-                      <Link href="#">SEARCH ENGINE OPTIMIZATION</Link>
-                    </li>
+                    <li><Link href="#">PPC MANAGEMENT SERVICE</Link></li>
+                    <li><Link href="#">SOCIAL MEDIA OPTIMIZATION</Link></li>
+                    <li><Link href="#">SEARCH ENGINE OPTIMIZATION</Link></li>
                   </ul>
                 </li>
-
               </ul>
             </li>
 
@@ -132,17 +103,10 @@ const Header = () => {
                 <span className={styles.menuText}>HIRE DEVELOPERS</span>
                 <img src="/downarrow.svg" alt="dropdown" className={styles.dropdownarrow} />
               </a>
-
               <ul className={styles.dropdown}>
-                <li>
-                  <Link href="#">HIRE SHOPIFY DEVELOPER</Link>
-                </li>
-                <li>
-                  <Link href="#">HIRE MAGENTO DEVELOPER</Link>
-                </li>
-                <li>
-                  <Link href="#">HIRE WORDPRESS DEVELOPER</Link>
-                </li>
+                <li><Link href="#">HIRE SHOPIFY DEVELOPER</Link></li>
+                <li><Link href="#">HIRE MAGENTO DEVELOPER</Link></li>
+                <li><Link href="#">HIRE WORDPRESS DEVELOPER</Link></li>
               </ul>
             </li>
 
@@ -175,43 +139,12 @@ const Header = () => {
           }`}
         >
           <ul>
-
-            <li>
-              <Link href="/" onClick={() => setOpen(false)}>
-                HOME
-              </Link>
-            </li>
-
-            <li>
-              <Link href="#" onClick={() => setOpen(false)}>
-                ABOUT US <img src="/downarrow.svg"alt="dropdown"className={styles.dropdownarrow}/>
-              </Link>
-            </li>
-
-            <li>
-              <Link href="#" onClick={() => setOpen(false)}>
-                OUR SERVICES <img src="/downarrow.svg"alt="dropdown"className={styles.dropdownarrow}/>
-              </Link>
-            </li>
-
-            <li>
-              <Link href="#" onClick={() => setOpen(false)}>
-                HIRE DEVELOPERS <img src="/downarrow.svg"alt="dropdown"className={styles.dropdownarrow}/>
-              </Link>
-            </li>
-
-            <li>
-              <Link href="#" onClick={() => setOpen(false)}>
-                BLOG
-              </Link>
-            </li>
-
-            <li>
-              <Link href="#" onClick={() => setOpen(false)}>
-                CONTACT US
-              </Link>
-            </li>
-
+            <li><Link href="/" onClick={() => setOpen(false)}>HOME</Link></li>
+            <li><Link href="#" onClick={() => setOpen(false)}>ABOUT US</Link></li>
+            <li><Link href="#" onClick={() => setOpen(false)}>OUR SERVICES</Link></li>
+            <li><Link href="#" onClick={() => setOpen(false)}>HIRE DEVELOPERS</Link></li>
+            <li><Link href="#" onClick={() => setOpen(false)}>BLOG</Link></li>
+            <li><Link href="#" onClick={() => setOpen(false)}>CONTACT US</Link></li>
           </ul>
         </nav>
 
